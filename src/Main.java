@@ -1,7 +1,8 @@
 import Decorations.DragonSticker;
 import Decorations.RedColor;
-import Eggs.DinosaurEgg;
 import Eggs.Egg;
+import Observer.Chick;
+import Observer.EasterEggBasket;
 
 public class Main {
 
@@ -10,14 +11,25 @@ public class Main {
 
         EasterBunny easterBunny = EasterBunny.getInstance();
         Egg egg = easterBunny.createEgg("pud-pud");
-        Egg egg1 = new DinosaurEgg();
         System.out.println(egg.getDescription());
-        System.out.println();
+        Egg egg2 = easterBunny.createEgg("dinosaur");
+        Egg egg3 = easterBunny.createEgg("chicken");
+        Egg egg4 = easterBunny.createEgg("chicken");
+        Egg egg5 = easterBunny.createEgg("chicken");
+
 
         egg = new DragonSticker(egg);
         egg = new RedColor(egg);
         System.out.println(egg.getDescription());
 
+        Chick chick = new Chick();
+        EasterEggBasket easterEggBasket = new EasterEggBasket();
+        easterEggBasket.addObserver(chick);
+        easterEggBasket.addEgg(egg);
+        easterEggBasket.addEgg(egg2);
+        easterEggBasket.addEgg(egg3);
+        easterEggBasket.addEgg(egg4);
+        easterEggBasket.addEgg(egg5);
 
         
         /*

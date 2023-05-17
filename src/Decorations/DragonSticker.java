@@ -2,7 +2,7 @@ package Decorations;
 
 import Eggs.Egg;
 
-public class DragonSticker extends EggDecorator{
+public class DragonSticker extends EggDecorator {
     Egg egg;
     public DragonSticker(Egg egg){
         this.egg = egg;

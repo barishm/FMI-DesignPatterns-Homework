@@ -2,7 +2,7 @@ package Decorations;
 
 import Eggs.Egg;
 
-public class YellowColor extends EggDecorator{
+public class YellowColor extends EggDecorator {
 
     Egg egg;
     public YellowColor(Egg egg){
